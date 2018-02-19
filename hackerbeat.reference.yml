@@ -4,7 +4,7 @@
 
 hackerbeat:
   # Defines how often an event is sent to the output
-  period: 1s
+  period: 10s
 
 #================================ General ======================================
 

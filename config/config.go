@@ -5,10 +5,12 @@ package config
 
 import "time"
 
+// Config represents the configuration of a Hackerbeat
 type Config struct {
 	Period time.Duration `config:"period"`
 }
 
+// DefaultConfig is the default configuration of a Hackerbeat
 var DefaultConfig = Config{
-	Period: 1 * time.Second,
+	Period: 10 * time.Second,
 }
