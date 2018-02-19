@@ -1,0 +1,9 @@
+- key: hackerbeat
+  title: hackerbeat
+  description:
+  fields:
+    - name: counter
+      type: long
+      required: true
+      description: >
+        PLEASE UPDATE DOCUMENTATION
