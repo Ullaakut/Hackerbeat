@@ -6,3 +6,6 @@
 
 # Dependencies
 /vendor
+
+# Logs
+/logsl
