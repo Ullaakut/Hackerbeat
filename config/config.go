@@ -7,10 +7,19 @@ import "time"
 
 // Config represents the configuration of a Hackerbeat
 type Config struct {
+	// Period determines the frequency at which the beat is running
 	Period time.Duration `config:"period"`
+
+	// Timeout is the limit time value after which we consider an HTTP request failed
+	Timeout time.Duration `config:"timeout"`
+
+	// NumberOfStories is the number of stories we want to index from the top stories
+	NumberOfStories int `config:"max_index"`
 }
 
 // DefaultConfig is the default configuration of a Hackerbeat
 var DefaultConfig = Config{
-	Period: 10 * time.Second,
+	Period:          1 * time.Second,
+	Timeout:         5 * time.Second,
+	NumberOfStories: 10,
 }
