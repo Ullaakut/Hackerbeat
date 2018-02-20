@@ -213,14 +213,63 @@ None
 
 
 [float]
-=== `counter`
+=== `story_id`
 
-type: long
+type: integer
 
 required: True
 
-PLEASE UPDATE DOCUMENTATION
+ID of the story
 
+
+[float]
+=== `story_score`
+
+type: integer
+
+required: True
+
+Score given to the story
+
+
+[float]
+=== `story_time`
+
+type: integer
+
+required: True
+
+UNIX timestamp at which the story was created
+
+
+[float]
+=== `story_title`
+
+type: string
+
+required: True
+
+Title of the story
+
+
+[float]
+=== `story_author`
+
+type: string
+
+required: True
+
+Name of the author of the story
+
+
+[float]
+=== `story_url`
+
+type: string
+
+required: True
+
+URL to which the story points
 
 [[exported-fields-kubernetes-processor]]
 == Kubernetes fields

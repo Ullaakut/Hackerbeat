@@ -4,4 +4,10 @@
 
 hackerbeat:
   # Defines how often an event is sent to the output
-  period: 10s
+  period: 60s
+
+  # Defines after how long an HTTP request without response fails
+  timeout: 5s
+
+  # How many of the top stories we want to index
+  number_of_stories: 10

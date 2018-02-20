@@ -14,12 +14,12 @@ type Config struct {
 	Timeout time.Duration `config:"timeout"`
 
 	// NumberOfStories is the number of stories we want to index from the top stories
-	NumberOfStories int `config:"max_index"`
+	NumberOfStories int `config:"number_of_stories"`
 }
 
 // DefaultConfig is the default configuration of a Hackerbeat
 var DefaultConfig = Config{
-	Period:          1 * time.Second,
+	Period:          60 * time.Second,
 	Timeout:         5 * time.Second,
 	NumberOfStories: 10,
 }

@@ -2,8 +2,33 @@
   title: hackerbeat
   description:
   fields:
-    - name: counter
-      type: long
+    - name: story_id
+      type: integer
       required: true
       description: >
-        PLEASE UPDATE DOCUMENTATION
+        ID of the story
+    - name: story_score
+      type: integer
+      required: true
+      description: >
+        Score given to the story
+    - name: story_time
+      type: integer
+      required: true
+      description: >
+        UNIX timestamp at which the story was created
+    - name: story_title
+      type: string
+      required: true
+      description: >
+        Title of the story
+    - name: story_author
+      type: string
+      required: true
+      description: >
+        Name of the author of the story
+    - name: story_url
+      type: string
+      required: true
+      description: >
+        URL to which the story points
