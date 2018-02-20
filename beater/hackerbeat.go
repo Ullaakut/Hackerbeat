@@ -138,6 +138,10 @@ func (bt *Hackerbeat) fetchStories() ([]story, error) {
 				return list, nil
 			}
 		case <-timeout.C:
+			bt.logger.Warnw(
+				"Timeout reached when fetching stories",
+				"timeout_value", bt.config.Timeout.String(),
+			)
 			return list, nil
 		}
 	}

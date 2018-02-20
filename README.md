@@ -1,6 +1,8 @@
 # Hackerbeat
 
-Welcome to Hackerbeat.
+Hackerbeat indexes the top stories of HackerNews into an ElasticSearch instance.
+
+<p align="center"><img width="80%" src="images/KibanaDashboard.png"/></p>
 
 Ensure that this folder is at the following location:
 `${GOPATH}/src/github.com/Ullaakut/hackerbeat`
@@ -12,10 +14,11 @@ Ensure that this folder is at the following location:
 * [Golang](https://golang.org/dl/) 1.7
 
 ### Init Project
+
 To get running with Hackerbeat and also install the
 dependencies, run the following command:
 
-```
+```bash
 make setup
 ```
 
@@ -23,7 +26,7 @@ It will create a clean git history for each major step. Note that you can always
 
 To push Hackerbeat in the git repository, run the following commands:
 
-```
+```bash
 git remote set-url origin https://github.com/Ullaakut/hackerbeat
 git push origin master
 ```
@@ -35,30 +38,29 @@ For further development, check out the [beat developer guide](https://www.elasti
 To build the binary for Hackerbeat run the command below. This will generate a binary
 in the same directory with the name hackerbeat.
 
-```
+```bash
 make
 ```
-
 
 ### Run
 
 To run Hackerbeat with debugging output enabled, run:
 
-```
+```bash
 ./hackerbeat -c hackerbeat.yml -e -d "*"
 ```
-
 
 ### Test
 
 To test Hackerbeat, run the following command:
 
-```
+```bash
 make testsuite
 ```
 
 alternatively:
-```
+
+```bash
 make unit-tests
 make system-tests
 make integration-tests
@@ -72,45 +74,41 @@ The test coverage is reported in the folder `./build/coverage/`
 Each beat has a template for the mapping in elasticsearch and a documentation for the fields
 which is automatically generated based on `fields.yml` by running the following command.
 
-```
+```bash
 make update
 ```
 
-
 ### Cleanup
 
-To clean  Hackerbeat source code, run the following commands:
+To clean Hackerbeat source code, run the following commands:
 
-```
+```bash
 make fmt
 make simplify
 ```
 
 To clean up the build directory and generated artifacts, run:
 
-```
+```bash
 make clean
 ```
-
 
 ### Clone
 
 To clone Hackerbeat from the git repository, run the following commands:
 
-```
+```bash
 mkdir -p ${GOPATH}/src/github.com/Ullaakut/hackerbeat
 git clone https://github.com/Ullaakut/hackerbeat ${GOPATH}/src/github.com/Ullaakut/hackerbeat
 ```
 
-
 For further development, check out the [beat developer guide](https://www.elastic.co/guide/en/beats/libbeat/current/new-beat.html).
-
 
 ## Packaging
 
 The beat frameworks provides tools to crosscompile and package your beat for different platforms. This requires [docker](https://www.docker.com/) and vendoring as described above. To build packages of your beat, run the following command:
 
-```
+```bash
 make package
 ```
 
