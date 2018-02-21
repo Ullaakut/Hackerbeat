@@ -20,6 +20,6 @@ type Config struct {
 // DefaultConfig is the default configuration of a Hackerbeat
 var DefaultConfig = Config{
 	Period:          60 * time.Second,
-	Timeout:         5 * time.Second,
+	Timeout:         10 * time.Second,
 	NumberOfStories: 10,
 }
