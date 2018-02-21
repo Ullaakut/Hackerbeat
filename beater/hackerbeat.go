@@ -60,7 +60,7 @@ func New(b *beat.Beat, cfg *common.Config) (beat.Beater, error) {
 	}
 
 	logger.Infow(
-		"Successfuully created Hackerbeat instance with the following configuration:",
+		"Successfully created Hackerbeat instance with the following configuration:",
 		"period", c.Period,
 		"timeout", c.Timeout,
 		"number_of_stories", c.NumberOfStories,
